@@ -7,8 +7,14 @@ def main(event, context):
 
     resp.say("Thank you for calling! Have a great day.", voice='alice')
 
-    print(str(resp))
+    return {
+        "statusCode": 200,
+        "headers": {
+            'Content-Type': 'text/xml',
+        },
+        "body": str(resp)
+    }
 
 
 if __name__ == '__main__':
-    main(None, None)
+    print(main(None, None))
