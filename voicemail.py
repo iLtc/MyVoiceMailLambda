@@ -2,7 +2,7 @@ from twilio.twiml.voice_response import VoiceResponse
 import google
 
 
-def main():
+def main(event, context):
     resp = VoiceResponse()
 
     resp.say("Thank you for calling! Have a great day.", voice='alice')
@@ -11,4 +11,4 @@ def main():
 
 
 if __name__ == '__main__':
-    main()
+    main(None, None)
